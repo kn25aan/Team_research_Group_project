@@ -1,0 +1,3 @@
+RESEARCH QUESTION 
+Is there a significant difference in the average number of passengers between domestic flights and international flights?
+
