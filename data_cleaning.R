@@ -48,3 +48,19 @@ ggplot(df, aes(x = GEO.Summary, y = Passenger.Count, fill = GEO.Summary)) +
   ) +
   theme_minimal() +
   scale_fill_manual(values = c("steelblue", "darkred"), name = "Flight Category")
+ U, Σ, and V^T. Reconstructing with `U @ Σ @ V^T`
+
+#Normality check
+domestic <- df$Passenger.Count[df$GEO.Summary == "Domestic"]
+international <- df$Passenger.Count[df$GEO.Summary == "International"]
+wilcox.test(Passenger.Count ~ GEO.Summary, data = df)
+
+# Load packages
+library(dplyr)
+
+# Read dataset
+df <- read.csv("Air_Traffic_Passenger_Statistics.csv")
+
+# Keep only required columns
+df <- df[, c("Passenger.Count", "GEO.Summary")]
+df <- na.omit(df)
