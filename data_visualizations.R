@@ -69,3 +69,5 @@ df <- df[, c("Passenger.Count", "GEO.Summary")]
 df <- na.omit(df)
 # Summary statistics for each group
 summary_stats <- df %>%
+group_by(GEO.Summary) %>%
+  summarise(
