@@ -65,3 +65,4 @@ df <- read.csv("Air_Traffic_Passenger_Statistics.csv")
 df <- df[, c("Passenger.Count", "GEO.Summary")]
 df <- na.omit(df)
 # Keep only required columns
+df <- df[, c("Passenger.Count", "GEO.Summary")]
