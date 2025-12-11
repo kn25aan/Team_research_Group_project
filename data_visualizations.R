@@ -72,4 +72,5 @@ summary_stats <- df %>%
 group_by(GEO.Summary) %>%
 summarise(
 n = n(),
-    median_passengers = median(Passenger.Count),
+  median_passengers = median(Passenger.Count),
+  IQR_passengers = IQR(Passenger.Count)
